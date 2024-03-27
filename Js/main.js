@@ -1,15 +1,19 @@
 
 
-var elList = document.querySelector(".List");
-var elItem = document.querySelector(".Item");
-var elText = document.querySelector(".text");
+var ellist = document.querySelector(".list");
+var elitem = document.querySelector(".item");
+var eltext = document.querySelector(".text")
 
-elList.addEventListener("submit" , function(evt) {
-    evt.preventDefault()
+ellist.addEventListener("submit" , function(evt) {
+    evt.preventDefault();
 
-    var Item = elItem.value.trim()
+    var input = elitem.value.trim()
 
-    console.log("Item");
+    console.log("item");
 
-    elText.textContent = Item;
+    if(input) {
+      eltext.textContent = input;
+    }
 });
+
+
