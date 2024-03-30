@@ -34,23 +34,50 @@
 // elList.addEventListener("submit" , ChangeEnter);
 
 
-var elbutton = document.querySelector(".button");
-var elbuttonka = document.querySelector(".buttonka");
-var elList = document.querySelector(".list");
+// var elbutton = document.querySelector(".button");
+// var elbuttonka = document.querySelector(".buttonka");
+// var elList = document.querySelector(".list");
 
 
-function ButtonSubmit(evt) {
-    evt.preventDefault();
+// function ButtonSubmit(evt) {
+//     evt.preventDefault();
 
-    elList.classList.toggle("open");
-}
+//     elList.classList.toggle("open");
+// }
 
 
-function Buttobka(evt) {
-    evt.preventDefault();
+// function Buttobka(evt) {
+//     evt.preventDefault();
 
-    elList.classList.toggle("open");
-}
+//     elList.classList.toggle("open");
+// }
 
-  elbutton.addEventListener("click", ButtonSubmit);
-  elbuttonka.addEventListener("click", Buttobka);
+//   elbutton.addEventListener("click", ButtonSubmit);
+//   elbuttonka.addEventListener("click", Buttobka);
+
+
+
+var odam = 100;
+var velik = 150;
+var moshin = 180;
+var Samolyot = 800;
+
+var elForm = document.querySelector(".form");
+var elinput = document.querySelector(".input");
+var eltext = document.querySelector(".text");
+var elOdam = document.querySelector(".text1");
+var elVelik = document.querySelector(".text2");
+var elSamalyot = document.querySelector(".text3");
+
+elForm.addEventListener("submit", function(evt) {
+    evt.preventDefault()
+
+    var input = elinput.value.trim()
+
+    eltext.textContent = "Soat" + input / odam.toFixed()
+    elOdam.textContent = "Soat" + input / velik.toFixed()
+    elVelik.textContent = "Soat" + input / moshin.toFixed()
+    elSamalyot.textContent = "Soat" + input / Samolyot.toFixed()
+
+});
+
